@@ -1,7 +1,7 @@
 import { AES, enc } from "crypto-js";
 import { SetStateAction, useState } from "react";
 
-export default function Crypto2() {
+export default function Decrypt() {
   const [pw, setPw] = useState("");
 //   const [content, setContent] = useState("");
   const [cText, setCText] = useState("");
@@ -29,6 +29,7 @@ export default function Crypto2() {
 
   return (
     <>
+        <h2>Decrypt here</h2>
         <p>Content:</p>
         <input type="text" value={cText} onChange={handleCTChange} />
         <p>Key:</p>

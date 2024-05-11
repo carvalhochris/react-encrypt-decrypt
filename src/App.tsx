@@ -1,13 +1,13 @@
 // import "./App.css";
-import Crypto1 from "./Crypto1";
-import Crypto2 from "./Crypto2";
+import Decrypt from "./Decrypt";
+import Encrypt from "./Encrypt";
 
 function App() {
   return (
     <>
       <div style={styles.div}>
-        <Crypto1 />
-        <Crypto2 />
+        <Encrypt />
+        <Decrypt />
       </div>
     </>
   );

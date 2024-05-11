@@ -1,7 +1,7 @@
 import { AES } from "crypto-js";
 import { SetStateAction, useState } from "react";
 
-export default function Crypto1() {
+export default function Encrypt() {
   const [pw, setPw] = useState("");
   const [content, setContent] = useState("");
   const [cText, setCText] = useState("");
@@ -26,14 +26,13 @@ export default function Crypto1() {
 
   return (
     <>
-        <p>Content:</p>
-        <input type="text" value={content} onChange={handleContentChange} />
-        <p>Key:</p>
-        <input type="password" value={pw} onChange={handlePwChange} />
-        <button onClick={enCrypt}>Encrypt</button>
-        {cText && <p>Encrypted Text: {cText}</p>}
+      <h2>Encrypt here</h2>
+      <p>Content:</p>
+      <input type="text" value={content} onChange={handleContentChange} />
+      <p>Key:</p>
+      <input type="password" value={pw} onChange={handlePwChange} />
+      <button onClick={enCrypt}>Encrypt</button>
+      {cText && <p>Encrypted Text: {cText}</p>}
     </>
   );
 }
-
-
