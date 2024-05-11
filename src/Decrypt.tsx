@@ -36,7 +36,7 @@ export default function Decrypt() {
   return (
     <>
       <h2>Decrypt here</h2>
-      <p>Content:</p>
+      <p>Encrypted content:</p>
       <input type="text" value={cText} onChange={handleCTChange} />
       <p>Key:</p>
       <input type="password" value={pw} onChange={handlePwChange} />
