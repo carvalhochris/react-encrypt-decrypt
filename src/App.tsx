@@ -8,6 +8,7 @@ function App() {
       <div style={styles.div}>
         <Encrypt />
         <Decrypt />
+        <p>built by <a href="https://christophercarvalho.com" target="#">chris</a></p>
       </div>
     </>
   );
