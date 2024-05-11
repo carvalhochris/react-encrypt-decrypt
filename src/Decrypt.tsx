@@ -3,7 +3,7 @@ import { SetStateAction, useState } from "react";
 
 export default function Decrypt() {
   const [pw, setPw] = useState("");
-//   const [content, setContent] = useState("");
+  //   const [content, setContent] = useState("");
   const [cText, setCText] = useState("");
   const [ogText, setOGText] = useState("");
 
@@ -20,24 +20,22 @@ export default function Decrypt() {
   };
 
   const deCrypt = () => {
-    var cipherText = cText
-    var password = pw
+    var cipherText = cText;
+    var password = pw;
     var bytes = AES.decrypt(cipherText, password);
     var originalText = bytes.toString(enc.Utf8);
-    setOGText(originalText)
+    setOGText(originalText);
   };
 
   return (
     <>
-        <h2>Decrypt here</h2>
-        <p>Content:</p>
-        <input type="text" value={cText} onChange={handleCTChange} />
-        <p>Key:</p>
-        <input type="password" value={pw} onChange={handlePwChange} />
-        <button onClick={deCrypt}>Decrypt</button>
-        {ogText && <p>Decrypted Text: {ogText}</p>}
+      <h2>Decrypt here</h2>
+      <p>Content:</p>
+      <input type="text" value={cText} onChange={handleCTChange} />
+      <p>Key:</p>
+      <input type="password" value={pw} onChange={handlePwChange} />
+      <button onClick={deCrypt}>Decrypt</button>
+      {ogText && <p>Decrypted Text: {ogText}</p>}
     </>
   );
 }
-
-
