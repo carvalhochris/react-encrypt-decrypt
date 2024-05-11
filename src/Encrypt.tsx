@@ -1,5 +1,6 @@
 import { AES } from "crypto-js";
 import { SetStateAction, useState } from "react";
+import { BsClipboard } from "react-icons/bs";
 
 export default function Encrypt() {
   const [pw, setPw] = useState("");
@@ -32,7 +33,19 @@ export default function Encrypt() {
       <p>Key:</p>
       <input type="password" value={pw} onChange={handlePwChange} />
       <button onClick={enCrypt}>Encrypt</button>
-      {cText && <p>Encrypted Text: {cText}</p>}
+
+      {cText && (
+        <p>
+          Encrypted Text: {cText}{" "}
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(cText);
+            }}
+          >
+            <BsClipboard />
+          </button>
+        </p>
+      )}
     </>
   );
 }
