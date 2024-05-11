@@ -23,7 +23,13 @@ export default function Decrypt() {
     var cipherText = cText;
     var password = pw;
     var bytes = AES.decrypt(cipherText, password);
+    // console.log(bytes.words)
     var originalText = bytes.toString(enc.Utf8);
+    if (originalText.length < 1) {
+      console.log('failed')
+        alert('probably incorrect')
+    }
+    console.log(originalText)
     setOGText(originalText);
   };
 

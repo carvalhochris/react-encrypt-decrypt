@@ -20,7 +20,7 @@ export default function Encrypt() {
 
   const enCrypt = () => {
     var ciphertext = AES.encrypt(content, pw).toString();
-    console.log(ciphertext);
+    // console.log(ciphertext);
     setCText(ciphertext);
   };
 
